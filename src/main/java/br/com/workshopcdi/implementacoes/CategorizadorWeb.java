@@ -25,6 +25,7 @@ public class CategorizadorWeb implements Categorizador {
         categoriaMap.forEach((keyword, categoria) -> {
             if (produto.getName().toLowerCase().contains(keyword.toLowerCase())) {
                 produto.setCategoria(categoria);
+                return;
             }
         });
     }
