@@ -13,8 +13,11 @@ import br.com.workshopcdi.repositories.ProdutosRepository;
 
 public class Application {
 
-    @Inject private Categorizador categorizador;
-    @Inject private ProdutosRepository produtosRepository;
+    @Inject
+    private Categorizador categorizador;
+
+    @Inject
+    private ProdutosRepository produtosRepository;
 
     public static void main(String[] args) {
         Weld weld = new Weld();

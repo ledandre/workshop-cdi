@@ -1,15 +1,17 @@
-package br.com.workshopcdi.interfaces;
+package br.com.workshopcdi.implementacoes;
 
 import java.util.HashMap;
 
 import br.com.workshopcdi.beans.CategoriaWeb;
 import br.com.workshopcdi.beans.Produto;
+import br.com.workshopcdi.interfaces.Categoria;
+import br.com.workshopcdi.interfaces.Categorizador;
 
 public class CategorizadorWeb implements Categorizador {
 
-    private static HashMap<String, Categoria> categoriaMap;
+    protected HashMap<String, Categoria> categoriaMap;
 
-    static {
+    public CategorizadorWeb() {
         categoriaMap = new HashMap<String, Categoria>();
         categoriaMap.put("Televisor", CategoriaWeb.TELEVISORES);
         categoriaMap.put("SmartTV", CategoriaWeb.TELEVISORES);
